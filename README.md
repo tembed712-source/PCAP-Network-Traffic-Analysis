@@ -31,6 +31,7 @@ The objective was to identify network devices, IP addresses, protocols, ports, D
 * Basic network security analysis
 
 ## 1. Network Traffic Overview
+![Network Traffic Overview](screenshots/01-network-overview.png)
 
 I first examined the overall network traffic contained in the PCAP.
 
@@ -43,6 +44,9 @@ Examples of private IPv4 addresses observed included:
 `192.168.1.175`
 
 ## 2. DNS Analysis
+![DNS Analysis](screenshots/02-dns-analysis.png)
+
+![mDNS Analysis](screenshots/03-mdns-analysis.png)
 
 I examined the DNS section to understand name-resolution activity.
 
@@ -58,6 +62,7 @@ Multicast addresses observed included:
 * `ff02::fb` — IPv6 mDNS multicast address
 
 ## 3. Connection Analysis
+![Network Connections](screenshots/04-connections.png)
 
 One connection observed was:
 
@@ -74,6 +79,7 @@ Traffic was also observed in the opposite direction:
 The capture also contained connections involving IPv6 addresses.
 
 ## 4. Open Port Analysis
+![Port 80 HTTP](screenshots/05-open-port-80.png)
 
 The analysis identified:
 
@@ -86,6 +92,7 @@ HTTP normally transmits application-layer information without the encryption pro
 Further HTTP analysis indicated that `192.168.1.1` was providing a web-based diagnostic interface.
 
 ## 5. HTTP Method Analysis
+![HTTP Methods](screenshots/06-http-methods.png)
 
 The PCAP contained three HTTP requests:
 
@@ -97,6 +104,7 @@ A **GET** request is normally used to request or retrieve a resource from a serv
 A **POST** request is commonly used to submit data or request an action from a server.
 
 ## 6. HTTP GET Analysis
+![HTTP GET Request](screenshots/07-http-get-analysis.png)
 
 One HTTP request observed was:
 
@@ -118,6 +126,7 @@ The Referer pointed to:
 This provided evidence that a client was interacting with a web-based diagnostic utility hosted on the local network device.
 
 ## 7. HTTP POST Analysis
+![HTTP POST Request](screenshots/08-http-post-analysis.png)
 
 The POST request identified was:
 
